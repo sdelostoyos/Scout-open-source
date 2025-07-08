@@ -5,6 +5,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 WORKSPACE_ROOT="$(cd "$SCRIPT_DIR/../.." && pwd)"
 cd "$WORKSPACE_ROOT"
+echo -e "\033[34mWorkspace Root: $WORKSPACE_ROOT\033[0m"
 
 # Suppress mesg warnings in non-interactive shells
 ttyname 0 >/dev/null 2>&1 && true || true
