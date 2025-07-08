@@ -33,6 +33,7 @@ else
     ROS_VER="${ROS_VER:-${AVAILABLE_ROS[0]}}"
 fi
 ROS_DIR="/opt/ros/$ROS_VER"
+echo -e "\033[34mScript Directory: $SCRIPT_DIR\033[0m"
 echo -e "\033[34mWorkspace Root: $WORKSPACE_ROOT\033[0m"
 echo -e "\033[32mROS Version: $ROS_VER\033[0m"
 
