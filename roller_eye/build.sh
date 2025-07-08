@@ -39,7 +39,7 @@ echo -e "\033[32mROS Version: $ROS_VER\033[0m"
 
 # Parse options: -f (clean), -r (Release), -v <version>
 BUILD_TYPE=Debug
-FW_APP_VER=$(git rev-parse --short HEAD)
+FW_APP_VER=$(git rev-parse --short HEAD 2>/dev/null || echo "nogit")
 while getopts "frv:" opt; do
   case "$opt" in
     f) rm -rf build devel ;;  # clean previous build
